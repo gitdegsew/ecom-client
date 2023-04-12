@@ -42,7 +42,9 @@ export const getCategories = () => {
     .then((response) => {
       return response.json();
     })
-    .catch((err) => console.log(err));
+    .catch((err) => {
+      console.log("error fetching categories")
+      console.log(err)});
 };
 
 export const listOrders = (userId, token) => {
